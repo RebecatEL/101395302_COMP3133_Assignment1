@@ -83,4 +83,6 @@ exports.resolvers = {
         return await Employee.findByIdAndDelete(args.id)
       }
     }
-}
+};
+
+//module.exports = resolvers;

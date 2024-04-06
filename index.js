@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 // var { graphqlHTTP } = require('express-graphql');
 var { buildSchema } = require('graphql');
 const cors = require('cors');
+const cool = require('cool-ascii-faces')
 
 const Resolvers = require('./resolvers')
 const TypeDefs = require('./schema')
@@ -39,8 +40,8 @@ async function startApolloServer() {
 
   await server.start();
 
-  const app = express();
-  // app.use('/graphql', graphqlHTTP({
+  const app = express().get('/cool', (req, res) => res.send(cool()))
+    // app.use('/graphql', graphqlHTTP({
   //   schema: buildSchema(TypeDefs.typeDefs),
   //   rootValue: Resolvers.resolvers,
   //   graphiql: true,
