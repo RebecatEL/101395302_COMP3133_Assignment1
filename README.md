@@ -1,4 +1,4 @@
-# 101395302_COMP3133_Assignment1
+# Backend of Angular Employee Management App
 Sample User Detail:
 - Username: test
 - Password: password123
